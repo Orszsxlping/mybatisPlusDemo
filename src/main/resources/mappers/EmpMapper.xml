@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.jiyun.mapper.EmpMapper">
+  <resultMap id="BaseResultMap" type="cn.jiyun.pojo.Emp">
+    <!--@mbg.generated-->
+    <!--@Table emp-->
+    <id column="eid" jdbcType="INTEGER" property="eid" />
+    <result column="ename" jdbcType="VARCHAR" property="ename" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="hobby" jdbcType="VARCHAR" property="hobby" />
+    <result column="img" jdbcType="VARCHAR" property="img" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="did" jdbcType="INTEGER" property="did" />
+    <result column="addr" jdbcType="VARCHAR" property="addr" />
+    <result column="creatTime" jdbcType="TIMESTAMP" property="creattime" />
+  </resultMap>
+
+</mapper>

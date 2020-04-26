@@ -1,0 +1,40 @@
+#  yml \u914D\u7F6E\u6587\u4EF6\u683C\u5F0F
+#  \u5C5E\u6027key \u5192\u53F7\u540E: \u7A7A\u683C\u52A0\u5C5E\u6027\u503C
+#  \u4E2D\u6587
+
+server:
+  servlet:
+    context-path: /mybatisPlusDemo  #\u9879\u76EE\u540D\u79F0
+  port: 8888   #\u7AEF\u53E3\u53F7
+
+
+#\u70ED\u90E8\u7F72
+spring:
+  devtools:
+    restart:
+      enabled: true  # true \u70ED\u90E8\u7F72\u751F\u6548
+      additional-exclude: src/main/java,static/**,mappers/**  #\u8BBE\u7F6E\u91CD\u542F\u7684\u76EE\u5F55
+      exclude: templates/**  #\u6392\u9664\u65E0\u9700\u91CD\u542F\u7684\u76EE\u5F55\uFF0C\u591A\u4E2A\u76EE\u5F55\u53EF\u4EE5\u7528\u82F1\u6587\u9017\u53F7\u9694\u5F00
+  freemarker:
+    cache: false  #\u5173\u95ED\u7F13\u5B58
+
+  #\u6570\u636E\u5E93\u94FE\u63A5
+  datasource:
+    url: jdbc:mysql://localhost:3306/h1906a?serverTimezone=UTC
+    username: root
+    password: root
+
+
+#mybatis puls \u914D\u7F6E
+mybatis-plus:
+  type-aliases-package: cn.jiyun.pojo  #\u7ED9\u5B9E\u4F53\u53D6\u522B\u540D
+  typeAliasesPackage : cn.jiyun.mapper #\u626B\u9762mapper\u5C42
+  mapper-locations : classpath:mapper/*.xml  #\u81EA\u5B9A\u4E49mapper.xml\u6587\u4EF6\u4F4D\u7F6E
+  global-config:
+    db-config:
+      id-type: auto  #\u58F0\u660E\u4E3B\u952E\u81EA\u589E\u914D\u7F6E
+      logic-delete-value : 0 #\u903B\u8F91\u5220\u9664
+  configuration:
+    map-underscore-to-camel-case: true  #\u662F\u5426\u5173\u95ED\u9A7C\u5CF0\u5230\u4E0B\u5212\u7EBF\u7684\u6620\u5C04
+    cache-enabled : false  #\u662F\u5426\u5F00\u542F\u4E8C\u7EA7\u7F13\u5B58
+    log-impl : org.apache.ibatis.logging.stdout.StdOutImpl  #\u6253\u5370sql\u8BED\u53E5

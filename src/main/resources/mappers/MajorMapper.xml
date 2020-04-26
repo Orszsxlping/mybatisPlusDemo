@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.jiyun.mapper.MajorMapper">
+  <resultMap id="BaseResultMap" type="cn.jiyun.pojo.Major">
+    <!--@mbg.generated-->
+    <!--@Table major-->
+    <id column="mid" jdbcType="INTEGER" property="mid" />
+    <result column="mname" jdbcType="VARCHAR" property="mname" />
+  </resultMap>
+
+</mapper>
